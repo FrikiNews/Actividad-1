@@ -119,7 +119,6 @@ aws s3 sync "$SOURCE_DIR" "s3://${BUCKET_NAME}" \
   --include "styles.css"           \
   --include "app.js"               \
   --delete                         \
-  --acl public-read                \
   --output text
 
 success "Archivos desplegados correctamente."
