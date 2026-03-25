@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>HydroTrans — Transporte de Hidrocarburos</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav>
+    <a href="#" class="logo">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5A2.5 2.5 0 0 1 9.5 9 2.5 2.5 0 0 1 12 6.5 2.5 2.5 0 0 1 14.5 9a2.5 2.5 0 0 1-2.5 2.5z"/>
+      </svg>
+      HydroTrans
+    </a>
+    <ul class="nav-links">
+      <li><a href="#services">Servicios</a></li>
+      <li><a href="#why">Nosotros</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+    <button class="nav-cta" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">
+      Cotizar
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section id="hero">
+    <div class="hero-content">
+      <span class="hero-tag">⚡ Líderes en Logística Energética</span>
+      <h1>Transporte Seguro de <span>Hidrocarburos</span></h1>
+      <p>Conectamos refinerías, terminales y puntos de distribución con la más alta seguridad, puntualidad y cumplimiento normativo en toda la república.</p>
+      <div class="search-bar">
+        <input id="searchInput" type="text" placeholder="Buscar ruta, terminal o servicio..." />
+        <button onclick="handleSearch()">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+          </svg>
+        </button>
+      </div>
+      <div class="hero-btns">
+        <button class="btn-primary" onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">Solicitar Servicio</button>
+        <button class="btn-outline" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Ver Servicios</button>
+      </div>
+    </div>
+
+    <!-- Blobs decorativos (estilo imagen) -->
+    <div class="blobs">
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <div class="blob"></div>
+      <!-- Líneas diagonales decorativas -->
+      <svg style="position:absolute;top:20%;right:20%;opacity:.25;width:120px;height:120px;" viewBox="0 0 120 120">
+        <line x1="0"  y1="20"  x2="120" y2="40"  stroke="white" stroke-width="1.5"/>
+        <line x1="0"  y1="50"  x2="120" y2="70"  stroke="white" stroke-width="1.5"/>
+        <line x1="0"  y1="80"  x2="120" y2="100" stroke="white" stroke-width="1.5"/>
+      </svg>
+    </div>
+    <div class="dots dots-1"></div>
+    <div class="dots dots-2"></div>
+  </section>
+
+  <!-- STATS -->
+  <section id="stats">
+    <div class="stat"><div class="stat-num" id="s1">0</div><div class="stat-label">Millones de barriles transportados</div></div>
+    <div class="stat"><div class="stat-num" id="s2">0</div><div class="stat-label">Años de experiencia</div></div>
+    <div class="stat"><div class="stat-num" id="s3">0</div><div class="stat-label">Unidades en flota</div></div>
+    <div class="stat"><div class="stat-num" id="s4">0</div><div class="stat-label">Clientes satisfechos</div></div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services">
+    <div class="section-header">
+      <span class="section-tag">Nuestros Servicios</span>
+      <h2>Soluciones Integrales de Transporte</h2>
+      <p>Ofrecemos una amplia gama de servicios diseñados para satisfacer las necesidades del sector energético con los más altos estándares de seguridad.</p>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="card-icon" style="background:rgba(58,123,213,.18);">🚛</div>
+        <h3>Transporte Terrestre</h3>
+        <p>Flota de pipas y autotanques especializados para crudo, gasolinas, diésel y productos petroquímicos bajo normas NOM y ASME.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(249,115,22,.18);">🏭</div>
+        <h3>Almacenamiento Temporal</h3>
+        <p>Terminales de almacenamiento con sistemas de contención secundaria, monitoreo continuo y certificación ISO 45001.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(16,185,129,.18);">📊</div>
+        <h3>Monitoreo en Tiempo Real</h3>
+        <p>Rastreo GPS 24/7, telemetría de carga y alertas inmediatas ante cualquier desviación de ruta o condición anormal.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(139,92,246,.18);">📋</div>
+        <h3>Gestión Documental</h3>
+        <p>Trámites ante SENER, CRE y ASEA, manifiestos de transporte, hojas de seguridad y cumplimiento regulatorio integral.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(0,210,255,.18);">🛡️</div>
+        <h3>Seguridad HSE</h3>
+        <p>Protocolos de Salud, Seguridad y Medio Ambiente con brigadas de respuesta a emergencias activas las 24 horas.</p>
+      </div>
+      <div class="card">
+        <div class="card-icon" style="background:rgba(244,63,94,.18);">🔗</div>
+        <h3>Logística Integrada</h3>
+        <p>Coordinación completa desde la fuente de producción hasta el punto de entrega final, optimizando tiempos y costos.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY US -->
+  <section id="why">
+    <div class="why-grid">
+      <div class="why-visual">
+        <div class="why-blob"></div>
+        <div class="why-blob"></div>
+        <div class="pipeline-icon">
+          <svg viewBox="0 0 200 200" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Tubería principal -->
+            <rect x="20" y="85" width="160" height="30" rx="15" fill="rgba(58,123,213,0.5)" stroke="#00d2ff" stroke-width="2"/>
+            <!-- Válvulas -->
+            <circle cx="70"  cy="100" r="12" fill="rgba(249,115,22,0.7)" stroke="#fbbf24" stroke-width="2"/>
+            <circle cx="130" cy="100" r="12" fill="rgba(249,115,22,0.7)" stroke="#fbbf24" stroke-width="2"/>
+            <!-- Indicadores -->
+            <rect x="62" y="55" width="16" height="30" rx="4" fill="#3a7bd5" stroke="#00d2ff" stroke-width="1.5"/>
+            <rect x="122" y="55" width="16" height="30" rx="4" fill="#3a7bd5" stroke="#00d2ff" stroke-width="1.5"/>
+            <!-- Tanque izq -->
+            <ellipse cx="30" cy="100" rx="18" ry="22" fill="rgba(58,123,213,0.4)" stroke="#3a7bd5" stroke-width="2"/>
+            <!-- Tanque der -->
+            <ellipse cx="170" cy="100" rx="18" ry="22" fill="rgba(58,123,213,0.4)" stroke="#3a7bd5" stroke-width="2"/>
+            <!-- Gotas de fluido -->
+            <circle cx="100" cy="100" r="5" fill="#00d2ff" opacity="0.9"/>
+            <circle cx="85"  cy="100" r="3" fill="#00d2ff" opacity="0.6"/>
+            <circle cx="115" cy="100" r="3" fill="#00d2ff" opacity="0.6"/>
+            <!-- Chispas de actividad -->
+            <circle cx="50"  cy="72" r="4" fill="#fbbf24" opacity="0.8"/>
+            <circle cx="150" cy="72" r="4" fill="#f97316" opacity="0.8"/>
+            <!-- Texto -->
+            <text x="100" y="155" text-anchor="middle" fill="#00d2ff" font-size="11" font-family="sans-serif" opacity="0.8">Sistema de Tuberías</text>
+          </svg>
+        </div>
+      </div>
+      <div class="why-text">
+        <span class="section-tag">¿Por qué elegirnos?</span>
+        <h2>Más de 25 años movilizando energía con responsabilidad</h2>
+        <p>Somos una empresa mexicana con presencia en 18 estados, especializados en el transporte seguro y eficiente de hidrocarburos líquidos y gaseosos para la industria energética.</p>
+        <ul class="check-list">
+          <li>Certificados por ASEA, CRE y NOM-002-ASEA</li>
+          <li>Flota propia de más de 320 unidades especializadas</li>
+          <li>Centro de control operativo activo 24/7/365</li>
+          <li>Cero derrames graves en los últimos 10 años</li>
+          <li>Seguro de responsabilidad civil por carga transportada</li>
+          <li>Operadores certificados y con actualización continua</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact">
+    <div class="contact-inner">
+      <span class="section-tag">Contacto</span>
+      <h2>¿Listo para optimizar tu cadena de suministro?</h2>
+      <p>Déjanos tus datos y un especialista se comunicará contigo en menos de 24 horas para diseñar una solución a tu medida.</p>
+      <form class="contact-form" onsubmit="handleForm(event)">
+        <input type="text"  id="fname" placeholder="Nombre completo" required />
+        <input type="email" id="femail" placeholder="Correo electrónico" required />
+        <input type="text"  id="fcompany" placeholder="Empresa" />
+        <textarea id="fmsg" placeholder="Cuéntanos sobre tu necesidad de transporte..."></textarea>
+        <button type="submit">Enviar mensaje</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <span>© 2026 <strong>HydroTrans S.A. de C.V.</strong> — Todos los derechos reservados.</span>
+    <span>Diseñado para el sector energético mexicano · <a href="#hero">Inicio</a></span>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
