@@ -1,12 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --navy:   #0d2b1f;
-  --dark:   #061a10;
-  --blue:   #1e8c5a;
-  --cyan:   #00ffaa;
-  --accent: #f97316;
-  --text:   #cdd5f0;
+  --navy:   #2b0d0d;
+  --dark:   #1a0606;
+  --blue:   #c0392b;
+  --cyan:   #ff6b6b;
+  --accent: #ff9f43;
+  --text:   #f0cdcd;
   --white:  #ffffff;
 }
 
